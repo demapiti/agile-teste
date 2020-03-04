@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <title>Agile Teste</title>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <nav>
+                <ul>
+                    <li class="user">
+                        User Name
+                    </li>
+                    <li>
+                        Sales Reports
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div id="inputs">
+            <label for="categoria">Categoria: </label>
+            <select id="categoria" class="input" onChange="update()">
+                <option value="Camisa" id="categoria1">Camisa</option>
+                <option value="Bermuda" id="categoria2">Bermuda</option>
+              </select>
+
+            <label for="produto">Produto: </label>
+            <select id="produto" class="input" onChange="update()">
+                <option value="" id="produto1"></option>
+                <option value="" id="produto2"></option>
+            </select>
+              
+            <label for="marca">Marca: </label>
+            <select id="marca" class="input" onChange="update()">
+                <option id="marca1"></option>
+                <option id="marca2"></option>
+            </select>
+        </div>
+
+        </div>
+        <div id="canvas">
+        <canvas id="chart" width="1000" height="200"></canvas>
+        </div>
+    </section>
+
+</body>
+<script src="js/model/Template.js"></script>
+<script src="js/index.js"></script>
+</html>

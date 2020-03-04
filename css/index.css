@@ -1,0 +1,55 @@
+body {
+    font: normal 15pt Arial;
+}
+
+header {
+    width: auto;
+    height: 20px;
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 100px;
+    background: #1E90FF;
+    text-align: center;
+}
+
+section {
+    border-radius: 10px;
+    width: 1500px;
+    height: 550px;
+    padding: 15px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.479);
+}
+
+.input {
+    margin: 0 315px 200px 0;
+    text-align: center;
+}
+
+.top {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 0px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+.user {
+	display: inline;
+	margin: 0 500px 0 15px;
+}
+
+
+
+footer {
+    text-align: center;
+}
