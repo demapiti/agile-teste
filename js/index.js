@@ -1,5 +1,7 @@
     let $ = document.querySelector.bind(document);
 
+    let chart = $('#chart');
+
     let categoria = $("#categoria");
     let produto = $("#produto");
     let marca = $("#marca");
@@ -9,7 +11,35 @@
     let marca1 = $('#marca1');
     let marca2 = $('#marca2');
 
-    let _template = new Template();
+    let ctx = new Chart(chart, {
+        type: 'bar',
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr"],
+                    datasets: [
+                        {
+                            label: 'Sales by Month for',
+                            data: [0,0,0,0],
+                            backgroundColor: '#1E90FF'
+                        }
+                            ]
+            },
+            options: {
+                scales: {
+                    yAxes: [
+                    {
+                        ticks: {
+                        beginAtZero: true
+                            }
+                    }
+                ]
+            }
+        }
+    })
+    
+    function chartUpdate(dados) {
+        ctx.data.datasets[0].data = dados;
+        ctx.update();
+    }
 
     function update() {
         let catSelect = categoria;
@@ -71,13 +101,13 @@
            
         console.log(marOption.value);
         
-        if (marOption.value == 'Camisa A1') _template.update([10,5,6,12])
-        if (marOption.value == 'Camisa A2') _template.update([5,10,6,8])
-        if (marOption.value == 'Camisa B1') _template.update([35,12,22,50])
-        if (marOption.value == 'Camisa B2') _template.update([15,12,8,3])
-        if (marOption.value == 'Bermuda A1') _template.update([20,15,21,22])
-        if (marOption.value == 'Bermuda A2') _template.update([10,15,8,12])
-        if (marOption.value == 'Bermuda B1') _template.update([15,10,8,6])
-        if (marOption.value == 'Bermuda B2') _template.update([12,16,10,20])
+        if (marOption.value == 'Camisa A1') chartUpdate([10,5,6,12])
+        if (marOption.value == 'Camisa A2') chartUpdate([5,10,6,8])
+        if (marOption.value == 'Camisa B1') chartUpdate([35,12,22,50])
+        if (marOption.value == 'Camisa B2') chartUpdate([15,12,8,3])
+        if (marOption.value == 'Bermuda A1') chartUpdate([20,15,21,22])
+        if (marOption.value == 'Bermuda A2') chartUpdate([10,15,8,12])
+        if (marOption.value == 'Bermuda B1') chartUpdate([15,10,8,6])
+        if (marOption.value == 'Bermuda B2') chartUpdate([12,16,10,20])
 }
 update();
