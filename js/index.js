@@ -98,9 +98,7 @@
             marca2.value = 'Bermuda B2';
 
         }
-           
-        console.log(marOption.value);
-        
+                   
         if (marOption.value == 'Camisa A1') chartUpdate([10,5,6,12])
         if (marOption.value == 'Camisa A2') chartUpdate([5,10,6,8])
         if (marOption.value == 'Camisa B1') chartUpdate([35,12,22,50])
