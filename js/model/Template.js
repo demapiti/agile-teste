@@ -1,11 +1,7 @@
 class Template {
 
-  constructor(dados) {
-    this._dados = dados;
-  }
-
-    update(dados) {
-      let chart = new Chart(document.querySelector('#chart'), {
+  update(dados) {
+    new Chart(document.querySelector('#chart'), {
       type: 'bar',
           data: {
             labels: ["Jan", "Feb", "Mar", "Apr"],
@@ -28,6 +24,6 @@ class Template {
                   ]
               }
           }
-      })
-    }
+      }
+   )}
 }
